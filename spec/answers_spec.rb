@@ -31,5 +31,13 @@ describe Answers do
       expect(Answers.new.sort_hash({ a: 2, b: 5, c: 1})).to eq ({ a: 1, b: 2, c: 5 })
     end
 
+    it "sort values of hash and return ordered array" do
+      expect(Answers.new.sort_hash_to_array({ a: 2, b: 5, c: 1})).to eq ([1,2,5])
+    end
+
+    it "reverses and converts key and value to Strings" do
+      expect(Answers.new.reverse_and_string({ a: 1, b: 2, c:3 })).to eq ({ "1"=>"a", "2"=>"b", "3"=>"c"})
+    end
+
   end
 end

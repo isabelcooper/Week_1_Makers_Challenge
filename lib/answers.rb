@@ -31,7 +31,14 @@ class Answers
       hash[key] = sorted_hash[counter]
       counter += 1
     end
+  end
 
+  def sort_hash_to_array(hash)
+    hash.values.sort
+  end
+
+  def reverse_and_string(hash)
+    Hash[hash.invert.collect { |key, value| [key.to_s, value.to_s] }]
   end
 
 end
