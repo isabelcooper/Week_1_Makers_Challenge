@@ -24,4 +24,14 @@ class Answers
     hash
   end
 
+  def sort_hash(hash)
+    counter = 0
+    sorted_hash = hash.values.sort
+    hash.each do |key, value|
+      hash[key] = sorted_hash[counter]
+      counter += 1
+    end
+
+  end
+
 end

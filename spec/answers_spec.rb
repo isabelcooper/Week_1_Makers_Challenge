@@ -27,5 +27,9 @@ describe Answers do
       expect(Answers.new.increment_hash({ a: 1, b: 2 })).to eq ({ a: 2, b: 3 })
     end
 
+    it "sort hash" do
+      expect(Answers.new.sort_hash({ a: 2, b: 5, c: 1})).to eq ({ a: 1, b: 2, c: 5 })
+    end
+
   end
 end
