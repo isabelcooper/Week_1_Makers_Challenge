@@ -38,6 +38,5 @@ describe Answers do
     it "reverses and converts key and value to Strings" do
       expect(Answers.new.reverse_and_string({ a: 1, b: 2, c:3 })).to eq ({ "1"=>"a", "2"=>"b", "3"=>"c"})
     end
-
   end
 end

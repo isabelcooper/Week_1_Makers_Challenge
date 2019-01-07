@@ -25,13 +25,9 @@ class Answers
   end
 
   def sort_hash(hash)
-    counter = 0
-    sorted_hash = hash.values.sort
-    hash.each do |key, value|
-      hash[key] = sorted_hash[counter]
-      counter += 1
-    end
+    Hash[(hash.keys).zip(hash.values.sort)]
   end
+
 
   def sort_hash_to_array(hash)
     hash.values.sort
