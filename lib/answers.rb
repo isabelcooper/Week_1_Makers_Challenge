@@ -28,7 +28,6 @@ class Answers
     Hash[(hash.keys).zip(hash.values.sort)]
   end
 
-
   def sort_hash_to_array(hash)
     hash.values.sort
   end
